@@ -25,49 +25,57 @@
   &__button {
     @extend %ft-middle;
     @extend %fs-classic;
-  
+
     width: 100px;
-  
+    text-align: center;
+
     color: $border-bottom;
-  
+    text-decoration: none;
+
     box-sizing: border-box;
-  
+
     border: 1px solid #f1cc9d;
     background-color: #f1cc9d;
     border-radius: 40px;
-  
+
     cursor: pointer;
     outline: none;
 
     transition: background-color 0.2s ease-in-out;
-  
+
     &:hover {
       background-color: transparent;
     }
-  
+
     &:active {
       background-color: $background-color;
     }
-  
+
     &:disabled {
       background: #e0e0e0;
       color: $disabled-button;
     }
-  
+
   }
-  
+
 }
 
 @media (max-width: $medium-screen) {
   .call-back {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: end;
+
     margin-left: 20px;
     margin-top: 50px;
-    justify-items: start;
-    
+
+    row-gap: 30px;
+
+    &__button {
+      padding: 10px;
+    }
+
     &__language {
       width: 40px;
     }
